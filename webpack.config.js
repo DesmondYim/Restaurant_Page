@@ -13,5 +13,14 @@ module.exports = {
 
     devServer: {
         static: './dist',
-    }
-}
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+        ],
+    },
+};

@@ -1,3 +1,5 @@
+import MainPic from './restaurant.jpg';
+
 const content = document.querySelector('#content');
 
 function createHeader() {
@@ -8,4 +10,14 @@ function createHeader() {
 
     return restaurantHeader;
 }
+
+function addRestaurantPic() {
+    const restaurantPic = new Image();
+    restaurantPic.src = MainPic;
+
+    return restaurantPic;
+}
+
+
 content.appendChild(createHeader());
+content.appendChild(addRestaurantPic());
