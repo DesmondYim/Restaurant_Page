@@ -1,4 +1,4 @@
-const body = document.querySelector('body');
+const content = document.querySelector('#content');
 
 function createHeader() {
     const restaurantHeader = document.createElement('h1');
@@ -8,5 +8,4 @@ function createHeader() {
 
     return restaurantHeader;
 }
-
-document.body.appendChild(createHeader());
+content.appendChild(createHeader());
