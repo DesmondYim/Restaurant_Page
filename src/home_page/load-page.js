@@ -1,4 +1,4 @@
-// import MainPic from './img/restaurant.jpg';
+import Restaurant from './restaurant.jpg';
 // import './style.css';
 
 // const content = document.querySelector('#content');
@@ -91,10 +91,12 @@ function appendContent(item) {
 }
 
 function loadPage() {
-
-
     const nav = createNavBar();
     appendContent(nav);
+
+    const restaurantPic = new Image();
+    restaurantPic.src = Restaurant;
+    appendContent(restaurantPic);
 
     const header = createHeader('Yim Fam Dining');
     appendContent(header);
