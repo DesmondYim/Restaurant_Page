@@ -1,2 +1,4 @@
-import default from './modules/load-page.js';
+import loadPage from "./modules/load-page";
 
+
+loadPage();

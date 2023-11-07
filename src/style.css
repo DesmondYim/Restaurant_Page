@@ -2,6 +2,12 @@
     text-align: center;
 }
 
-.main_pic {
-    margin: 0px -50px 0px 0px;
+.navTab {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+#nav {
+    background-color: black;
 }
