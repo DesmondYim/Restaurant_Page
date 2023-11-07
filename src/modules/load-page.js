@@ -1,19 +1,9 @@
-import Restaurant from './img/restaurant.jpg';
-
 function createHeader(restaurantName) {
     const header = document.createElement('h1');
     header.id = "restaurant_name"
     header.innerHTML = restaurantName;
 
     return header;
-}
-
-function createRestrDescription(summary) {
-    const description = document.createElement('div');
-    description.classList = "restaurant_description";
-    description.innerHTML = summary;
-
-    return description;
 }
 
 function createBtn(id, text) {
@@ -53,22 +43,7 @@ function appendContent(item) {
     return content.append(item);
 }
 
-function loadPage() {
-    const nav = createNavBar();
-    appendContent(nav);
-
-    const restaurantPic = new Image();
-    restaurantPic.src = Restaurant;
-    appendContent(restaurantPic);
-
-    const header = createHeader('Yim Fam Dining');
-    appendContent(header);
-
-    const description = createRestrDescription('Fresh and delicious food made by yours truly, Mama Yim');
-    appendContent(description);
-
-    const footer = createFooter('footer', 'Contact us now!');
-    appendContent(footer);
-}
-
-export default loadPage;
+export {createNavBar};
+export {createHeader};
+export {createFooter};
+export {appendContent};
