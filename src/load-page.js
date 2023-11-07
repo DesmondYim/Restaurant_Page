@@ -1,41 +1,4 @@
-import Restaurant from './restaurant.jpg';
-// import './style.css';
-
-// const content = document.querySelector('#content');
-
-// function createHeader() {
-//     const restaurantHeader = document.createElement('h1');
-//     restaurantHeader.id = "restaurantName";
-
-//     restaurantHeader.innerHTML = "Yim Fam";
-
-//     return restaurantHeader;
-// }
-
-// function addRestaurantPic() {
-//     const restaurantPic = new Image();
-//     restaurantPic.classList = "main_pic";
-//     restaurantPic.src = MainPic;
-
-//     return restaurantPic;
-// }
-
-// function createDescript() {
-//     const restrDescript = document.createElement('div');
-//     restrDescript.classList = "description";
-
-//     restrDescript.innerHTML = "Welcome to Yim Fam where we serve the best of Mama Yim's homemade cooking!"
-
-//     return restrDescript;
-// }
-
-// function loadHome() {
-//     content.appendChild(createHeader());
-//     content.appendChild(addRestaurantPic());
-//     content.appendChild(createDescript());
-// }
-
-// export default loadHome;
+import Restaurant from './img/restaurant.jpg';
 
 function createHeader(restaurantName) {
     const header = document.createElement('h1');
