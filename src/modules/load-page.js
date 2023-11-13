@@ -28,6 +28,12 @@ function createNavBar() {
     return navBar;
 }
 
+function createMain() {
+    const main = document.createElement('div');
+    main.classList = 'main';
+    return main;
+}
+
 function createFooter(id, text) {
     const footer = document.createElement('footer');
     footer.id = id;
@@ -45,5 +51,6 @@ function appendContent(item) {
 
 export {createNavBar};
 export {createHeader};
+export {createMain};
 export {createFooter};
 export {appendContent};
