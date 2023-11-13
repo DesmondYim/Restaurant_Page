@@ -2,7 +2,7 @@ import {createNavBar} from "./modules/load-page";
 import {createHeader} from "./modules/load-page";
 import {createFooter} from "./modules/load-page";
 import {appendContent} from "./modules/load-page";
-import { createRestrDescription } from "./modules/render_contact";
+import { createRestrDescription } from "./modules/render_home";
 import "./style.css";
 import Restaurant from './img/restaurant.jpg';
 
