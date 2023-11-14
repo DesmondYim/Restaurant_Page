@@ -9,11 +9,17 @@ function createRestrDescription(summary) {
 }
 
 function renderHome() {
+    const mainBody = document.createElement('div');
+    mainBody.classList = 'mainBody';
+
     const restaurantPic = new Image();
     restaurantPic.src = Restaurant;
-    appendContent(restaurantPic);
+    mainBody.appendChild(restaurantPic);
 
+    const description = createRestrDescription('Serving since 1802')
+    mainBody.appendChild(description);
 
+    return mainBody;
 }
 
 export default renderHome();
