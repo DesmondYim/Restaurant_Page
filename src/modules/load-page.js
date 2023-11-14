@@ -1,3 +1,7 @@
+import renderContacts from './render_contact';
+
+
+
 function createHeader(restaurantName) {
     const header = document.createElement('h1');
     header.id = "restaurant_name"
@@ -9,7 +13,7 @@ function createHeader(restaurantName) {
 function createBtn(id, text) {
     const btn = document.createElement('button');
     btn.id = id;
-    btn.classList = "navTab";
+    btn.classList = "button";
     btn.innerHTML = text;
     return btn;
 }
@@ -19,8 +23,11 @@ function createNavBar() {
     navBar.id = "nav";
 
     const homeBtn = createBtn('home', 'Home');
+    loadMain(homeBtn, renderHome());
     const menuBtn = createBtn('menu', 'Menu');
+    loadMain(menuBtn, renderMenu());
     const contactBtn = createBtn('contact', 'Contact Us');
+    loadMain(contactBtn, renderContact());
 
     navBar.appendChild(homeBtn);
     navBar.appendChild(menuBtn);
@@ -28,10 +35,30 @@ function createNavBar() {
     return navBar;
 }
 
+function setActiveButton(button) {
+    const buttons = document.querySelectorAll(".button");
+  
+    buttons.forEach((button) => {
+      if (button !== this) {
+        button.classList.remove("active");
+      }
+    });
+  
+    button.classList.add("active");
+  }
+
 function createMain() {
     const main = document.createElement('div');
     main.classList = 'main';
     return main;
+}
+
+function loadMain(button, renderMain) {
+    button.addEventListener("click", (e) => {
+        if (e.target.classList.contains("active")) return;
+        setActiveButton(button);
+        renderMain;
+      })
 }
 
 function createFooter(id, text) {

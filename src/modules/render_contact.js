@@ -11,26 +11,44 @@ function addEmployeeName(EmployeeName) {
     return nameLabel;
 }
 
-function addEmployeeSummary(description) {
-    const employeeSummary = document.createElement('div');
-    employeeSummary.classList = 'employeeSummary';
-    employeeSummary.innerHTML = description;
-    return employeeSummary;
+function addParagraph(description) {
+    const paragraph = document.createElement('p');
+    paragraph.classList = 'paragraph';
+    paragraph.innerHTML = description;
+    return paragraph;
 }
 
-function createProfile(image, employeeName, description) {
+function createProfile(image, employeeName, description, email) {
     const profile = document.createElement('div');
     profile.classList = 'profile';
 
     const profileImage = createContactIcon(image);
     const profileName = addEmployeeName(employeeName);
-    const profileSummary = addEmployeeSummary(description);
+    const profileSummary = addParagraph(description);
+    const profileEmail = addParagraph(email);
 
     profile.appendChild(profileImage);
     profile.appendChild(profileName);
     profile.appendChild(profileSummary);
+    profile.appendChild(profileEmail);
 
     return profile;
 }
 
-export default createProfile;
+function renderContacts() {
+    const container = document.createElement('div');
+    container.classList = 'container';
+
+    const profile1 = createProfile();
+    const profile2 = createProfile();
+    const profile3 = createProfile();
+
+   container.appendChild(profile1);
+   container.appendChild(profile2);
+   container.appendChild(profile3);
+
+   return container;
+}
+
+
+export default renderContacts;
