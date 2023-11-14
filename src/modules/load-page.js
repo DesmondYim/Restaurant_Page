@@ -1,5 +1,6 @@
 import renderContacts from './render_contact';
 import renderHome from './render_home';
+import renderMenu from './render_menu';
 
 
 
@@ -28,7 +29,7 @@ function createNavBar() {
     const menuBtn = createBtn('menu', 'Menu');
     loadMain(menuBtn, renderMenu());
     const contactBtn = createBtn('contact', 'Contact Us');
-    loadMain(contactBtn, renderContact());
+    loadMain(contactBtn, renderContacts());
 
     navBar.appendChild(homeBtn);
     navBar.appendChild(menuBtn);

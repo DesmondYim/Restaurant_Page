@@ -1,8 +1,8 @@
-import {createNavBar} from "./modules/load-page";
-import {createHeader} from "./modules/load-page";
+import { createNavBar } from "./modules/load-page";
+import { createHeader } from "./modules/load-page";
 import { createMain } from "./modules/load-page";
-import {createFooter} from "./modules/load-page";
-import {appendContent} from "./modules/load-page";
+import { createFooter } from "./modules/load-page";
+import { appendContent } from "./modules/load-page";
 // import { createRestrDescription } from "./modules/render_home";
 import "./style.css";
 // import Restaurant from './img/restaurant.jpg';
@@ -10,9 +10,9 @@ import "./style.css";
 const nav = createNavBar();
 appendContent(nav);
 
-const restaurantPic = new Image();
-restaurantPic.src = Restaurant;
-appendContent(restaurantPic);
+// const restaurantPic = new Image();
+// restaurantPic.src = Restaurant;
+// appendContent(restaurantPic);
 
 const header = createHeader('Yim Fam Dining');
 appendContent(header);
