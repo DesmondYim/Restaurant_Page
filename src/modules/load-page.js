@@ -1,4 +1,5 @@
 import renderContacts from './render_contact';
+import renderHome from './render_home';
 
 
 
