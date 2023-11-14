@@ -14,7 +14,7 @@ appendContent(nav);
 // restaurantPic.src = Restaurant;
 // appendContent(restaurantPic);
 
-const header = createHeader('Yim Fam Dining');
+const header = createHeader(`Dining at Pooh's Corner`);
 appendContent(header);
 
 const main = createMain();
@@ -23,7 +23,7 @@ appendContent(main);
 // const description = createRestrDescription('Fresh and delicious food made by yours truly, Mama Yim');
 // appendContent(description);
 
-const footer = createFooter('footer', 'Contact us now!');
+const footer = createFooter('footer', 'Open 10a.m. to 6p.m.!');
 appendContent(footer);
 
 // loadPage();

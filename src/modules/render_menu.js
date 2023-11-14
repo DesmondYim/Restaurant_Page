@@ -43,7 +43,7 @@ function createItem(imageFile, itemName, cost, detail) {
     return menuItem;
 }
 
-function renderMenu() {
+function createMenu() {
     const mainBody = document.createElement('div');
     mainBody.classList = 'mainBody';
 
@@ -62,6 +62,12 @@ function renderMenu() {
     mainBody.appendChild(food4);
 
     return mainBody;
+}
+
+function renderMenu() {
+    const main = document.getElementById("main")
+    main.textContent = '';
+    main.appendChild(createMenu());
 }
 
 export default renderMenu;

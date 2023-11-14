@@ -2,13 +2,10 @@ import renderContacts from './render_contact';
 import renderHome from './render_home';
 import renderMenu from './render_menu';
 
-
-
 function createHeader(restaurantName) {
     const header = document.createElement('h1');
     header.id = "restaurant_name"
     header.innerHTML = restaurantName;
-
     return header;
 }
 
@@ -25,11 +22,11 @@ function createNavBar() {
     navBar.id = "nav";
 
     const homeBtn = createBtn('home', 'Home');
-    loadMain(homeBtn, renderHome());
+    handleLoadMain(homeBtn, renderHome());
     const menuBtn = createBtn('menu', 'Menu');
-    loadMain(menuBtn, renderMenu());
+    handleLoadMain(menuBtn, renderMenu());
     const contactBtn = createBtn('contact', 'Contact Us');
-    loadMain(contactBtn, renderContacts());
+    handleLoadMain(contactBtn, renderContacts());
 
     navBar.appendChild(homeBtn);
     navBar.appendChild(menuBtn);
@@ -47,15 +44,15 @@ function setActiveButton(button) {
     });
   
     button.classList.add("active");
-  }
+}
 
 function createMain() {
     const main = document.createElement('div');
-    main.classList = 'main';
+    main.id = 'main';
     return main;
 }
 
-function loadMain(button, renderMain) {
+function handleLoadMain(button, renderMain) {
     button.addEventListener("click", (e) => {
         if (e.target.classList.contains("active")) return;
         setActiveButton(button);

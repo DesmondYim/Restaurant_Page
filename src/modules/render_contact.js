@@ -39,7 +39,7 @@ function createProfile(image, employeeName, description, email) {
     return profile;
 }
 
-function renderContacts() {
+function createContacts() {
     const container = document.createElement('div');
     container.classList = 'container';
 
@@ -55,6 +55,12 @@ function renderContacts() {
    container.appendChild(profile3);
 
    return container;
+}
+
+function renderContacts() {
+    const main = document.getElementById("main")
+    main.textContent = '';
+    main.appendChild(createContacts());
 }
 
 

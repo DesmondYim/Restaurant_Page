@@ -8,18 +8,24 @@ function createRestrDescription(summary) {
     return description;
 }
 
-function renderHome() {
-    const mainBody = document.createElement('div');
-    mainBody.classList = 'mainBody';
+function createHome() {
+    const main = document.createElement('div');
+    main.classList = 'main';
 
     const restaurantPic = new Image();
     restaurantPic.src = Restaurant;
-    mainBody.appendChild(restaurantPic);
+    main.appendChild(restaurantPic);
 
     const description = createRestrDescription('Serving since 1802')
-    mainBody.appendChild(description);
+    main.appendChild(description);
 
-    return mainBody;
+    return main;
+}
+
+function renderHome() {
+    const main = document.getElementById("main")
+    main.textContent = '';
+    main.appendChild(createHome());
 }
 
 export default renderHome();
