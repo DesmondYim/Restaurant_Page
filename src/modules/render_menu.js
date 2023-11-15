@@ -66,7 +66,8 @@ function createMenu() {
 
 function renderMenu() {
     const main = document.querySelector("main");
-    // main.textContent = '';
+    main.textContent = ''; 
+    //refreshes page
     main.appendChild(createMenu());
 }
 

@@ -59,7 +59,8 @@ function createContacts() {
 
 function renderContacts() {
     const main = document.querySelector("main");
-    // main.textContent = '';
+    main.textContent = '';
+    //refreshes page
     main.appendChild(createContacts());
 }
 

@@ -24,7 +24,8 @@ function createHome() {
 
 function renderHome() {
     const main = document.querySelector("main");
-    // main.innerHTML = '';
+    main.innerHTML = '';
+    //refreshes page
     main.appendChild(createHome());
 }
 
