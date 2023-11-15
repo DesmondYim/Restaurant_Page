@@ -1,4 +1,4 @@
-import Restaurant from './img/restaurant.jpg';
+import Restaurant from '../img/restaurant.jpg';
 
 function createRestrDescription(summary) {
     const description = document.createElement('div');
@@ -9,23 +9,23 @@ function createRestrDescription(summary) {
 }
 
 function createHome() {
-    const main = document.createElement('div');
-    main.classList = 'main';
+    const home = document.createElement('div');
+    home.classList = 'home';
 
     const restaurantPic = new Image();
     restaurantPic.src = Restaurant;
-    main.appendChild(restaurantPic);
+    home.appendChild(restaurantPic);
 
     const description = createRestrDescription('Serving since 1802')
-    main.appendChild(description);
+    home.appendChild(description);
 
-    return main;
+    return home;
 }
 
 function renderHome() {
-    const main = document.getElementById("main")
-    main.textContent = '';
+    const main = document.querySelector("main");
+    // main.innerHTML = '';
     main.appendChild(createHome());
 }
 
-export default renderHome();
+export default renderHome;

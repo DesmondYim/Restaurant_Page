@@ -19,11 +19,11 @@ function createParagraph(text) {
 function createItemDetail(itemName, cost, detail) {
     const summary = document.createElement('div');
 
-    const itemName = createParagraph(itemName);
+    const item = createParagraph(itemName);
     const itemCost = createParagraph(`$`+cost);
     const itemDetail = createParagraph(detail);
 
-    summary.appendChild(itemName);
+    summary.appendChild(item);
     summary.appendChild(itemCost);
     summary.appendChild(itemDetail);
     return summary;
@@ -44,8 +44,8 @@ function createItem(imageFile, itemName, cost, detail) {
 }
 
 function createMenu() {
-    const mainBody = document.createElement('div');
-    mainBody.classList = 'mainBody';
+    const menu = document.createElement('div');
+    menu.classList = 'menu';
 
     const food1 = createItem(TiggerTails, `Tigger Tails`, 5, `Chocolate \
         and honey covered pretzels`);
@@ -56,17 +56,17 @@ function createMenu() {
     const food4 = createItem(PoohPuffs, `Pooh Puffs`, 2, `Sweet and refreshing \
         cream puffs in the shape of your favourite Winnie the Pooh`);
 
-    mainBody.appendChild(food1);
-    mainBody.appendChild(food2);
-    mainBody.appendChild(food3);
-    mainBody.appendChild(food4);
+    menu.appendChild(food1);
+    menu.appendChild(food2);
+    menu.appendChild(food3);
+    menu.appendChild(food4);
 
-    return mainBody;
+    return menu;
 }
 
 function renderMenu() {
-    const main = document.getElementById("main")
-    main.textContent = '';
+    const main = document.querySelector("main");
+    // main.textContent = '';
     main.appendChild(createMenu());
 }
 

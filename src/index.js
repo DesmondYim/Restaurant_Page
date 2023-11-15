@@ -3,27 +3,30 @@ import { createHeader } from "./modules/load-page";
 import { createMain } from "./modules/load-page";
 import { createFooter } from "./modules/load-page";
 import { appendContent } from "./modules/load-page";
-// import { createRestrDescription } from "./modules/render_home";
+import {loadMain} from "./modules/load-page";
+import renderHome from './modules/render_home';
 import "./style.css";
-// import Restaurant from './img/restaurant.jpg';
 
-const nav = createNavBar();
-appendContent(nav);
+console.log('hi');
+function initializeWebsite() {
+    const content = document.querySelector("#content");
 
-// const restaurantPic = new Image();
-// restaurantPic.src = Restaurant;
-// appendContent(restaurantPic);
+    const nav = createNavBar();
+    content.appendChild(nav);
 
-const header = createHeader(`Dining at Pooh's Corner`);
-appendContent(header);
+    const header = createHeader(`Dining at Pooh's Corner`);
+    content.appendChild(header);
 
-const main = createMain();
-appendContent(main);
+    const main = createMain();
+    content.appendChild(main);
+    console.log(main);
 
-// const description = createRestrDescription('Fresh and delicious food made by yours truly, Mama Yim');
-// appendContent(description);
+    loadMain();
 
-const footer = createFooter('footer', 'Open 10a.m. to 6p.m.!');
-appendContent(footer);
+    const footer = createFooter('footer', 'Open 10a.m. to 6p.m.!');
+    content.appendChild(footer);
 
-// loadPage();
+    renderHome();
+}
+
+initializeWebsite();

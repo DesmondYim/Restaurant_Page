@@ -22,11 +22,8 @@ function createNavBar() {
     navBar.id = "nav";
 
     const homeBtn = createBtn('home', 'Home');
-    handleLoadMain(homeBtn, renderHome());
     const menuBtn = createBtn('menu', 'Menu');
-    handleLoadMain(menuBtn, renderMenu());
     const contactBtn = createBtn('contact', 'Contact Us');
-    handleLoadMain(contactBtn, renderContacts());
 
     navBar.appendChild(homeBtn);
     navBar.appendChild(menuBtn);
@@ -47,16 +44,26 @@ function setActiveButton(button) {
 }
 
 function createMain() {
-    const main = document.createElement('div');
-    main.id = 'main';
+    const main = document.createElement('main');
+    main.classList.add('main');
     return main;
 }
 
-function handleLoadMain(button, renderMain) {
+function loadMain() {
+    const homeBtn = document.getElementById("home");
+    const menuBtn = document.getElementById("menu");
+    const contactBtn = document.getElementById("contact");
+
+    handleLoadMain(homeBtn, renderHome);
+    handleLoadMain(menuBtn, renderMenu);
+    handleLoadMain(contactBtn, renderContacts);
+}
+
+function handleLoadMain(button, callback) {
     button.addEventListener("click", (e) => {
         if (e.target.classList.contains("active")) return;
         setActiveButton(button);
-        renderMain;
+        callback();
       })
 }
 
@@ -78,5 +85,6 @@ function appendContent(item) {
 export {createNavBar};
 export {createHeader};
 export {createMain};
+export {loadMain};
 export {createFooter};
 export {appendContent};

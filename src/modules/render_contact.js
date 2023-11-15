@@ -58,8 +58,8 @@ function createContacts() {
 }
 
 function renderContacts() {
-    const main = document.getElementById("main")
-    main.textContent = '';
+    const main = document.querySelector("main");
+    // main.textContent = '';
     main.appendChild(createContacts());
 }
 
