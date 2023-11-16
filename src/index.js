@@ -5,9 +5,9 @@ import { createFooter } from "./modules/load-page";
 import { appendContent } from "./modules/load-page";
 import {loadMain} from "./modules/load-page";
 import renderHome from './modules/render_home';
+import TreeDivider from './img/tree_trunk.png';
 import "./style.css";
 
-console.log('hi');
 function initializeWebsite() {
     const content = document.querySelector("#content");
 
@@ -16,6 +16,11 @@ function initializeWebsite() {
 
     const header = createHeader(`Dining at Pooh's Corner`);
     content.appendChild(header);
+
+    const headDivider = new Image();
+    headDivider.src = TreeDivider;
+    headDivider.id = "divider";
+    content.appendChild(headDivider);
 
     const main = createMain();
     content.appendChild(main);

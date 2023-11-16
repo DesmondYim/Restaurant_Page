@@ -14,6 +14,7 @@ function createHome() {
 
     const restaurantPic = new Image();
     restaurantPic.src = Restaurant;
+    restaurantPic.id = "restaurantPic";
     home.appendChild(restaurantPic);
 
     const description = createRestrDescription('Serving since 1802')
