@@ -28,7 +28,7 @@ function initializeWebsite() {
 
     loadMain();
 
-    const footer = createFooter('footer', 'Open 10a.m. to 6p.m.!');
+    const footer = createFooter('footer', 'Open 10a.m. to 6p.m. at 100 Acre Woods!');
     content.appendChild(footer);
 
     renderHome();
