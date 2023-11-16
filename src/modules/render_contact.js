@@ -1,18 +1,17 @@
-import Pooh from '../img/Pooh.png';
+import Pooh from '../img/pooh.png';
 import Tigger from '../img/tigger-kanga.png';
 import Eeyore from '../img/eeyore.png';
 
 function createContactIcon(source) {
+    const imgContainer = document.createElement('div');
+    imgContainer.classList = "profileContainer";
+    
     const icon = new Image();
     icon.src = source;
-    return icon
-}
+    icon.classList = "contactImg";
 
-function addEmployeeName(EmployeeName) {
-    const nameLabel = document.createElement('div');
-    nameLabel.classList = 'nameLabel';
-    nameLabel.innerHTML = EmployeeName
-    return nameLabel;
+    imgContainer.appendChild(icon);
+    return imgContainer;
 }
 
 function addParagraph(description) {
@@ -26,15 +25,20 @@ function createProfile(image, employeeName, description, email) {
     const profile = document.createElement('div');
     profile.classList = 'profile';
 
+    const detail = document.createElement('div');
+    detail.classList = 'contactDetail';
+
     const profileImage = createContactIcon(image);
-    const profileName = addEmployeeName(employeeName);
+    const profileName = addParagraph(employeeName);
+    profileName.classList = 'nameLabel';
     const profileSummary = addParagraph(description);
     const profileEmail = addParagraph(email);
 
     profile.appendChild(profileImage);
-    profile.appendChild(profileName);
-    profile.appendChild(profileSummary);
-    profile.appendChild(profileEmail);
+    detail.appendChild(profileName);
+    detail.appendChild(profileSummary);
+    detail.appendChild(profileEmail);
+    profile.appendChild(detail);
 
     return profile;
 }
@@ -45,10 +49,13 @@ function createContacts() {
 
     const profile1 = createProfile(Pooh, 'Winnie the Pooh', 
         `Best head chef at Pooh's corner`, `poohbear@fakeemail.com`);
-    const profile2 = createProfile(Tigger, `Kanga and Tigger`, 
-        `Chef assistants making this all happen`, `chefs@fakeemail.com`);
+    profile1.id = "contact1";
+    const profile2 = createProfile(Tigger, `Tigger`, 
+        `Assistant chef making this all happen`, `chefs@fakeemail.com`);
+    profile2.id = "contact2";
     const profile3 = createProfile(Eeyore, `Eeyore`, `Manager who'll handle
         all your concerns`, `manager@fakeemail.com`);
+    profile3.id = "contact3";
 
    container.appendChild(profile1);
    container.appendChild(profile2);

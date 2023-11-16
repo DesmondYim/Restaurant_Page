@@ -20,6 +20,7 @@ function createItemDetail(itemName, cost, detail) {
     const summary = document.createElement('div');
 
     const item = createParagraph(itemName);
+    item.classList = "menuItemName";
     const itemCost = createParagraph(`$`+cost);
     const itemDetail = createParagraph(detail);
 
@@ -34,7 +35,7 @@ function createItem(imageFile, itemName, cost, detail) {
     menuItem.classList = 'menuItem';
 
     const image = createItemImage(imageFile);
-    image.classList = 'menuItemImage';
+    image.classList = 'menuImg';
     const details = createItemDetail(itemName, cost, detail);
     details.classList = 'menuItemDetail';
 
@@ -49,10 +50,10 @@ function createMenu() {
 
     const food1 = createItem(TiggerTails, `Tigger Tails`, 5, `Chocolate \
         and honey covered pretzels`);
-    const food2 = createItem(PoohTarts, `Pooh Tarts`, 4, `Adorable egg tarts \
-        with an assortment of fruit flavors`);
+    const food2 = createItem(PoohTarts, `Pooh Tarts`, 4, `Adorable 100 \
+        Acre egg tarts with an assortment of fruit flavors`);
     const food3 = createItem(AcreSandwiches, `Acre Sandwiches`, 7, `Sandwiches \
-        with an smackerel of honey ham and cheese slices`);
+        with an smackerel of honeyed ham and cheese slices`);
     const food4 = createItem(PoohPuffs, `Pooh Puffs`, 2, `Sweet and refreshing \
         cream puffs in the shape of your favourite Winnie the Pooh`);
 

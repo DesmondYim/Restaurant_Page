@@ -15,18 +15,95 @@ body {
     width: auto;
 }
 
-.navTab {
+#nav {
+    /* background-color: black; */
+    display: flex;
+    justify-content: end;
+}
+
+.button {
     padding: 10px;
     background-color: black;
     margin: 5px;
     color: white;
 }
 
-#nav {
-    /* background-color: black; */
+.menu {
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+}
 
+.menuImg {
+    max-height: 400px;
+    max-width: 400px;
+    border-radius: 300px;
+}
+
+.menuItemName {
+    font-weight: bolder;
+}
+
+.menuItem {
+    border: black 2px solid;
+    border-radius: 50px;
+    background-color: white;
+    padding: 5px;
+    width: 450px;
+    margin: 5px;
+    font-size: large;
+}
+
+.profile {
+    display:flex;
+    flex-direction: row;
+    margin: 50px;
+}
+
+.profile div {
+    margin-right: 50px;
+}
+
+.profileContainer {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100px;
+    overflow: hidden;
+    /* object-fit: cover; */
+}
+
+.contactImg {
+    max-width: 400px;
+    max-height:400px;
+    position: relative;
+    /* left:-70px;
+    top:-50px; */
+}
+
+p {
+    font-size: 20px;
+}
+.nameLabel {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+    
+
+#contact1 .contactImg {
+    left: -90px;
+    top: -20px;
+}
+
+#contact2 .contactImg {
+    left: -80px;
+    top: -50px;
+}
+
+#contact3 .contactImg {
+    left: -140px;
+    top: -50px;
 }
 
 #footer {
